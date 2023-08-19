@@ -1,0 +1,511 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://scenes/welcome.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ColorRect2.gd" type="Script" id=2]
+[ext_resource path="res://scenes/OptionButton.gd" type="Script" id=3]
+[ext_resource path="res://FRAMD.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://IMPACT.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://scenes/quitbox.tres" type="StyleBox" id=6]
+[ext_resource path="res://L_10646.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/D.gd" type="Script" id=8]
+[ext_resource path="res://Styles/RoomsStyleBox.tres" type="StyleBox" id=9]
+[ext_resource path="res://scenes/Hosted.gd" type="Script" id=10]
+[ext_resource path="res://scenes/MainPanel.gd" type="Script" id=11]
+[ext_resource path="res://scenes/Hosted Sector.gd" type="Script" id=12]
+[ext_resource path="res://scenes/Create.gd" type="Script" id=13]
+[ext_resource path="res://scenes/Name.gd" type="Script" id=14]
+[ext_resource path="res://scenes/Refresh.gd" type="Script" id=15]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.113725, 0.0588235, 0.211765, 1 )
+
+[sub_resource type="Theme" id=3]
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+outline_size = 1
+outline_color = Color( 0.160784, 0.027451, 0.698039, 1 )
+use_filter = true
+extra_spacing_char = 1
+extra_spacing_space = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.54902, 0, 0.25098, 1 )
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0.160784, 0.027451, 0.698039, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.301961, 0, 0.12549, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color( 0.160784, 0.027451, 0.698039, 1 )
+shadow_size = 3
+shadow_offset = Vector2( 1, 1 )
+
+[sub_resource type="Theme" id=8]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.329412, 0.188235, 0.435294, 1 )
+border_width_top = 13
+border_width_bottom = 13
+border_color = Color( 0.0470588, 0.486275, 0.431373, 1 )
+corner_radius_top_left = 13
+corner_radius_top_right = 13
+corner_radius_bottom_right = 13
+corner_radius_bottom_left = 13
+shadow_color = Color( 0.145098, 0.713726, 0.803922, 0.6 )
+shadow_size = 6
+
+[sub_resource type="DynamicFont" id=17]
+size = 25
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 22
+outline_size = 1
+outline_color = Color( 0.266667, 0.576471, 0.580392, 1 )
+extra_spacing_top = 6
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=11]
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 25
+outline_size = 1
+outline_color = Color( 0.0509804, 0.2, 0.415686, 1 )
+extra_spacing_top = 3
+extra_spacing_bottom = 2
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=18]
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.0941176, 0.0509804, 0.0509804, 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.0941176, 0.129412, 0.345098, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.00784314, 0.00784314, 0.00784314, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=9]
+size = 12
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+
+[node name="Control1" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.113725, 0.0588235, 0.211765, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+modulate = Color( 0.831373, 0.741176, 0.741176, 1 )
+margin_left = 7.0
+margin_top = 218.0
+margin_right = 422.0
+margin_bottom = 569.0
+theme = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="username" type="LineEdit" parent="ColorRect2"]
+margin_left = 59.0
+margin_top = 11.0
+margin_right = 188.0
+margin_bottom = 55.0
+text = "username "
+
+[node name="OK" type="Button" parent="ColorRect2"]
+margin_left = 106.0
+margin_top = 59.0
+margin_right = 137.0
+margin_bottom = 79.0
+text = "OK"
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect2"]
+margin_left = 61.0
+margin_top = 85.0
+margin_right = 171.0
+margin_bottom = 111.0
+script = ExtResource( 3 )
+
+[node name="quit" type="Button" parent="."]
+margin_left = 906.0
+margin_top = 532.0
+margin_right = 1018.0
+margin_bottom = 592.0
+text = "Quit"
+
+[node name="Menu" type="Panel" parent="."]
+margin_left = 42.0
+margin_right = 339.0
+margin_bottom = 213.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="singleplayer" type="Button" parent="Menu"]
+margin_left = 37.0
+margin_top = 40.0
+margin_right = 328.0
+margin_bottom = 89.0
+rect_rotation = -0.459083
+theme = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/hseparation = 3
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Single Player"
+icon_align = 1
+
+[node name="mutilplayer" type="Button" parent="Menu"]
+margin_left = 37.0
+margin_top = 108.0
+margin_right = 328.0
+margin_bottom = 157.0
+rect_rotation = -0.459083
+theme = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_constants/hseparation = 3
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Multiplayer"
+icon_align = 1
+
+[node name="MainPanel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.0
+margin_top = -211.0
+margin_right = 324.0
+margin_bottom = 211.0
+theme = SubResource( 8 )
+custom_styles/panel = SubResource( 7 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Qpanel" type="Button" parent="MainPanel"]
+margin_left = 611.0
+margin_top = 20.0
+margin_right = 639.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 17 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 6 )
+text = "X"
+
+[node name="Label" type="Label" parent="MainPanel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -195.0
+margin_top = -17.0
+margin_right = -58.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Market Place"
+align = 1
+uppercase = true
+
+[node name="D" type="Button" parent="MainPanel"]
+margin_left = 446.0
+margin_top = 237.0
+margin_right = 481.0
+margin_bottom = 268.0
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "D"
+icon_align = 1
+script = ExtResource( 8 )
+
+[node name="O" type="Button" parent="MainPanel"]
+margin_left = 491.0
+margin_top = 237.0
+margin_right = 526.0
+margin_bottom = 268.0
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "O"
+icon_align = 1
+
+[node name="G" type="Button" parent="MainPanel"]
+margin_left = 536.0
+margin_top = 237.0
+margin_right = 571.0
+margin_bottom = 268.0
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "G"
+icon_align = 1
+
+[node name="Z" type="Button" parent="MainPanel"]
+margin_left = 579.0
+margin_top = 237.0
+margin_right = 614.0
+margin_bottom = 268.0
+custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+text = "Z"
+icon_align = 1
+
+[node name="LineEdit" type="LineEdit" parent="MainPanel"]
+margin_left = 213.0
+margin_top = 130.0
+margin_right = 298.0
+margin_bottom = 154.0
+text = "lobbyname"
+
+[node name="Rooms" type="Button" parent="MainPanel"]
+margin_left = 314.0
+margin_top = 208.0
+margin_right = 401.0
+margin_bottom = 247.0
+custom_fonts/font = SubResource( 15 )
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
+text = "Rooms"
+
+[node name="Host" type="Button" parent="MainPanel"]
+margin_left = 314.0
+margin_top = 253.0
+margin_right = 401.0
+margin_bottom = 292.0
+custom_fonts/font = SubResource( 15 )
+custom_styles/hover = ExtResource( 9 )
+custom_styles/pressed = ExtResource( 9 )
+custom_styles/normal = ExtResource( 9 )
+text = "Host"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PanelHostName" type="Panel" parent="MainPanel/Host"]
+visible = false
+margin_left = -67.0
+margin_top = -95.0
+margin_right = 134.0
+margin_bottom = -7.0
+
+[node name="LineEdit" type="LineEdit" parent="MainPanel/Host/PanelHostName"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -9.0
+margin_right = 123.0
+margin_bottom = 15.0
+theme = SubResource( 18 )
+custom_styles/focus = SubResource( 19 )
+custom_styles/normal = SubResource( 19 )
+text = " Room Name"
+max_length = 10
+caret_blink = true
+
+[node name="Name" type="Panel" parent="MainPanel/Host/PanelHostName"]
+margin_left = 134.0
+margin_top = 32.0
+margin_right = 174.0
+margin_bottom = 46.0
+script = ExtResource( 14 )
+
+[node name="Input" type="LineEdit" parent="MainPanel/Host/PanelHostName/Name"]
+margin_right = 58.0
+margin_bottom = 24.0
+
+[node name="Create" type="Panel" parent="MainPanel/Host/PanelHostName"]
+margin_left = 134.0
+margin_top = 32.0
+margin_right = 190.0
+margin_bottom = 60.0
+script = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="close" type="Button" parent="MainPanel/Host/PanelHostName"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 48.0
+margin_bottom = 22.0
+text = "close"
+
+[node name="Hosted" type="Panel" parent="MainPanel"]
+visible = false
+margin_left = 249.0
+margin_top = 46.0
+margin_right = 417.0
+margin_bottom = 344.0
+
+[node name="Panel" type="Panel" parent="MainPanel/Hosted"]
+margin_left = 6.0
+margin_top = 35.0
+margin_right = 166.0
+margin_bottom = 65.0
+custom_styles/panel = SubResource( 16 )
+script = ExtResource( 10 )
+
+[node name="Name" type="Label" parent="MainPanel/Hosted/Panel"]
+margin_left = 10.0
+margin_top = 8.0
+margin_right = 149.0
+margin_bottom = 22.0
+text = "Name"
+align = 1
+
+[node name="Exit" type="Button" parent="MainPanel/Hosted"]
+margin_left = 147.0
+margin_top = 2.0
+margin_right = 166.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/normal = ExtResource( 6 )
+text = "X"
+
+[node name="Refresh" type="Button" parent="MainPanel/Hosted"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 59.0
+margin_top = 10.0
+margin_right = 110.0
+margin_bottom = 30.0
+text = "Refresh"
+script = ExtResource( 15 )
+
+[node name="Entries" type="Control" parent="MainPanel/Hosted"]
+margin_left = 2.0
+margin_top = 31.0
+margin_right = 168.0
+margin_bottom = 288.0
+
+[node name="HostedSector" type="Panel" parent="MainPanel"]
+visible = false
+margin_left = -188.0
+margin_top = -89.0
+margin_right = 834.0
+margin_bottom = 510.0
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="MainPanel/HostedSector"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -168.0
+margin_right = 153.0
+margin_bottom = 61.0
+
+[node name="messages" type="Panel" parent="MainPanel/HostedSector"]
+margin_left = 394.0
+margin_top = 168.0
+margin_right = 655.0
+margin_bottom = 427.0
+custom_styles/panel = SubResource( 14 )
+
+[node name="LineEdit" type="LineEdit" parent="MainPanel/HostedSector/messages"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -30.0
+
+[node name="TextEdit" type="TextEdit" parent="MainPanel/HostedSector/messages"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -30.0
+
+[node name="Please Wait" type="Panel" parent="MainPanel/HostedSector"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 182.0
+margin_top = 84.0
+margin_right = 193.0
+margin_bottom = 95.0
+
+[node name="wait" type="Label" parent="MainPanel/HostedSector/Please Wait"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -81.5
+margin_top = -23.0
+margin_right = 81.5
+margin_bottom = 23.0
+text = "Creating the room..."
+
+[connection signal="button_up" from="ColorRect2/OK" to="." method="_on_OK_button_up"]
+[connection signal="item_selected" from="ColorRect2/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="button_up" from="quit" to="." method="_on_quit_button_up"]
+[connection signal="pressed" from="Menu/mutilplayer" to="." method="_on_mutilplayer_pressed"]
+[connection signal="pressed" from="MainPanel/Qpanel" to="." method="_on_Qpanel_pressed"]
+[connection signal="pressed" from="MainPanel/D" to="." method="_on_D_pressed"]
+[connection signal="pressed" from="MainPanel/Rooms" to="." method="_on_Rooms_pressed"]
+[connection signal="pressed" from="MainPanel/Host" to="." method="_on_Host_pressed"]
+[connection signal="focus_entered" from="MainPanel/Host/PanelHostName/LineEdit" to="." method="_on_LineEdit_focus_entered"]
+[connection signal="clicked" from="MainPanel/Host/PanelHostName/Create" to="." method="_on_Create_clicked"]
+[connection signal="gui_input" from="MainPanel/Host/PanelHostName/Create" to="MainPanel/Host/PanelHostName/Create" method="_on_Create_gui_input"]
+[connection signal="pressed" from="MainPanel/Host/PanelHostName/close" to="." method="_on_close_pressed"]
+[connection signal="gui_input" from="MainPanel/Hosted" to="MainPanel/Hosted" method="_on_Hosted_gui_input"]
+[connection signal="mouse_entered" from="MainPanel/Hosted" to="MainPanel/Hosted" method="_on_Hosted_mouse_entered"]
+[connection signal="gui_input" from="MainPanel/Hosted/Panel" to="MainPanel/Hosted/Panel" method="_on_Panel_gui_input"]
+[connection signal="mouse_entered" from="MainPanel/Hosted/Panel" to="MainPanel/Hosted/Panel" method="_on_Panel_mouse_entered"]
+[connection signal="selected" from="MainPanel/Hosted/Panel" to="." method="_on_Panel_selected"]
+[connection signal="pressed" from="MainPanel/Hosted/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="clicked" from="MainPanel/Hosted/Refresh" to="." method="_on_Refresh_clicked"]
+[connection signal="gui_input" from="MainPanel/Hosted/Refresh" to="MainPanel/Hosted/Refresh" method="_on_Refresh_gui_input"]
+[connection signal="mouse_entered" from="MainPanel/Hosted/Refresh" to="MainPanel/Hosted/Refresh" method="_on_Refresh_mouse_entered"]
